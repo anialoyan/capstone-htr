@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/anial/Downloads/capstone-htr/SimpleHTR/mlruns/0/922c58aec0e641e487e4b4e64bf6df8c/artifacts
+end_time: 1743995208826
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 922c58aec0e641e487e4b4e64bf6df8c
+run_name: SimpleHTR-armo-tuning-2
+run_uuid: 922c58aec0e641e487e4b4e64bf6df8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743971561650
+status: 3
+tags: []
+user_id: anial

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/anial/Downloads/capstone-htr/SimpleHTR/mlruns/0/ae074e172d6b4550b6d544cb16c9e572/artifacts
+end_time: 1743616932901
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ae074e172d6b4550b6d544cb16c9e572
+run_name: SimpleHTR-armo-run1
+run_uuid: ae074e172d6b4550b6d544cb16c9e572
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743616629601
+status: 3
+tags: []
+user_id: anial
