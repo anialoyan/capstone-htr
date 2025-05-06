@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.htr_env/
+simplehtr38/
+.htr_env/
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model checkpoints and large output files
+**/model_checkpoints_armo/
+**/saved_models/
+**/weights/
+**/build/
+*.ckpt
+*.h5
+*.pth
+*.pb
+*.meta
+*.index
+*.data-*
+
+# Output data and predictions
+**/results/
+**/test_results*.csv
+**/train_results*.csv
+**/validation_results*.csv
+*.log
+*.out
+
+# Datasets (custom or synthetic)
+**/cropped_words/
+**/synthetic_words*/
+**/lmdb/
+*.tsv
+*.txt
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python dependency management
+Pipfile.lock
+poetry.lock
+
+# Build and dist
+build/
+dist/
+*.egg-info/
+
+# Misc
+*.zip
+*.tar.gz
+*.bak
