@@ -1,6 +1,8 @@
 # Armenian Handwritten Text Recognition (HTR)
 ![Python](https://img.shields.io/badge/Python-3.8-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
 This repository presents a modular system for Armenian handwritten word recognition. The pipeline combines text detection and recognition methods and supports configurable decoding strategies.
 
 ## Repository Structure
