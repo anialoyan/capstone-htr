@@ -60,7 +60,7 @@ This repository includes several key notebooks that support data preparation, mo
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/your-username/capstone-htr.git
+git clone https://github.com/anialoyan/capstone-htr.git
 cd capstone-htr
 ```
 
