@@ -41,7 +41,6 @@ simplehtr38/
 **/synthetic_words*/
 **/lmdb/
 *.tsv
-*.txt
 
 # OS and IDE files
 .DS_Store

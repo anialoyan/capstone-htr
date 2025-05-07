@@ -87,13 +87,8 @@ If not using `wbs`, the default decoders `bestpath` and `beamsearch` require no 
 
 ## Required Downloads
 
-Some files must be downloaded manually and extracted to the following locations. These files will be made available via public hosting (e.g., Dropbox) and should be placed in the correct subdirectories.
+Some files must be downloaded manually and extracted to the following locations. These files will be made available [here](https://www.dropbox.com/scl/fo/tonqqzvq3b0rp32jeqzd8/AA_LtzkcgiX1jxKYeU3Al3E?rlkey=179ssdgn07hby5cfawtt2evm9&st=yer8ftwj&dl=0) and should be placed in the correct subdirectories. Their empty folders live in the project. Additionally, some data that was used in the scope of this project also can be found following the same link.
 
-| Archive Name                      | Destination Folder                             |
-| --------------------------------- | ---------------------------------------------- |
-| SimpleHTR\_model\_checkpoints.zip | SimpleHTR/model\_checkpoints\_armo/            |
-| ClovaAI\_saved\_model.zip         | deep-text-recognition-benchmark/saved\_models/ |
-| CRAFT\_weights.zip                | CRAFT-pytorch/weights/                         |
 
 Pretraining data is not included. To generate synthetic data, use the notebooks in the `data_preparation/` directory.
 
