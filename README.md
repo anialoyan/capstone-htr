@@ -48,9 +48,10 @@ This repository includes several key notebooks that support data preparation, mo
 
 | Notebook                 | Location                                | Purpose                                                                 |
 |--------------------------|-----------------------------------------|-------------------------------------------------------------------------|
-| `data_annotation.ipynb` | `data_preparation/`                     | Cleans and filters annotated Armenian handwriting samples.              |
+| `data_annotation.ipynb` | `data_preparation/`                     | Creates, cleans, and filters annotated Armenian handwriting samples.              |
 | `data_generation.ipynb` | `data_preparation/`                     | Generates and augments synthetic word-level handwritten images.         |
 | `fine_tuning.ipynb`     | `deep-text-recognition-benchmark/`      | Performs transfer learning for the ClovaAI recognizer using Armenian data. |
+| `fine_tuning.ipynb`     | `SimpleHTR/`                            | Performs transfer learning for the SimpleHTR recognizer using Armenian data. |
 | `usage.ipynb`           | `CRAFT-pytorch/`                        | Demonstrates CRAFT text detection on sample images.                     |
 | `main.ipynb`            | `pipeline/`                             | Interactive demo combining drawing, detection, and recognition.         |
 
