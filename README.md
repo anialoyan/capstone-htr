@@ -23,21 +23,22 @@ capstone-htr/
 │       ├── annotations_clean.txt      # Cleaned annotation file
 │       └── corpus.txt                 # Corpus for Word Beam Search decoding
 │
-├── deep-text-recognition-benchmark/  # PyTorch-based ClovaAI OCR
+├── deep-text-recognition-benchmark/   # PyTorch-based ClovaAI OCR
 │   ├── lmdb/                          # LMDB-format training data
 │   ├── pretrained/                    # Pretrained MJ/ST models
 │   └── fine_tuning.ipynb              # Model adaptation notebook
 │
 ├── CRAFT-pytorch/                 # CRAFT text detector
 │   ├── weights/                   # Pretrained detector weights (.pth)
-│   └── inference.py              # Modified detection pipeline with orientation handling
+│   └── inference.py               # Modified detection pipeline with orientation handling
 │
-├── CTCWordBeamSearch/            # Word Beam Search decoder
+├── CTCWordBeamSearch/             # Word Beam Search decoder
 │   └── build/                     # Compiled C++ backend (.pyd/.so)
 │
 ├── data_preparation/             # Dataset creation and refinement
-│   ├── data_annotation.ipynb      # Creating and cleaning the real handwritten dataset
-│   └── data_generation.ipynb      # Synthetic data generation and real data augmentation
+│   ├── data_annotation.ipynb     # Creating and cleaning the real handwritten dataset
+│   ├── data_generation.ipynb     # Synthetic data generation and real data augmentation
+│   └── README.md     
 │
 ├── requirements.txt              # Python dependency file
 └── README.md
