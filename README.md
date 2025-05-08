@@ -90,8 +90,19 @@ If not using `wbs`, the default decoders `bestpath` and `beamsearch` require no 
 
 Some files must be downloaded manually and extracted to the following locations. These files will be made available [here](https://www.dropbox.com/scl/fo/tonqqzvq3b0rp32jeqzd8/AA_LtzkcgiX1jxKYeU3Al3E?rlkey=179ssdgn07hby5cfawtt2evm9&st=yer8ftwj&dl=0) and should be placed in the correct subdirectories. Their empty folders live in the project. Additionally, some data that was used in the scope of this project also can be found following the same link.
 
+### For a simple inference, you can download only the model weights
 
-Pretraining data is not included. To generate synthetic data, use the notebooks in the `data_preparation/` directory.
+- CRAFT-pytorch/weights has the detector weights
+
+
+- SimpleHTR/model has the English pretrained weights for SimpleHTR
+- SimpleHTR/model_checkpoints_armo has the Armenian fine-tuned weights for SimpleHTR
+
+
+- deep-text-recognition-benchmark/pretrained has the English pretrained weights for Clova
+- deep-text-recognition-benchmark/saved_models has the fine-tuned Armenian weights for Clova
+
+Pretraining data (both synthetic and real) can be downloaded as well. It lies in SimpleHTR/data 
 
 ## Running the Drawing Interface
 
