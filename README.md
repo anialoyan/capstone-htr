@@ -36,8 +36,8 @@ capstone-htr/
 │   └── build/                     # Compiled C++ backend (.pyd/.so)
 │
 ├── data_preparation/             # Dataset creation and refinement
-│   ├── data_annotation.ipynb      # Filtering missing or invalid labels
-│   └── data_generation.ipynb      # Glyph-level synthetic generation and augmentation
+│   ├── data_annotation.ipynb      # Creating and cleaning the real handwritten dataset
+│   └── data_generation.ipynb      # Synthetic data generation and real data augmentation
 │
 ├── requirements.txt              # Python dependency file
 └── README.md
