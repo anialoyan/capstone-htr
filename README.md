@@ -9,40 +9,66 @@ This repository presents a modular system for Armenian handwritten word recognit
 
 ```
 capstone-htr/
-├── pipeline/                       # Pipeline and UI logic
-│   ├── wrapper.py                  # Detection and recognition wrapper
-│   ├── board.py                    # OpenCV-based drawing interface
-│   └── run_board.py                # CLI-based board launcher
-│
-├── SimpleHTR/                      # TensorFlow-based CRNN recognizer
-│   ├── model_checkpoints_armo/     # Fine-tuned Armenian model: charList.txt, snapshots, wordCharList.txt
-│   ├── model_arm/                  # Backup copy of the base model (not required for execution)
-│   └── data/
-│       ├── cropped_words/              # Real handwritten word images
-│       ├── synthetic_words_inverted/  # Inverted synthetic images
-│       ├── annotations_clean.txt      # Cleaned annotation file
-│       └── corpus.txt                 # Corpus for Word Beam Search decoding
-│
-├── deep-text-recognition-benchmark/   # PyTorch-based ClovaAI OCR
-│   ├── lmdb/                          # LMDB-format training data
-│   ├── pretrained/                    # Pretrained MJ/ST models
-│   └── fine_tuning.ipynb              # Model adaptation notebook
-│
-├── CRAFT-pytorch/                 # CRAFT text detector
-│   ├── weights/                   # Pretrained detector weights (.pth)
-│   └── inference.py               # Modified detection pipeline with orientation handling
-│
-├── CTCWordBeamSearch/             # Word Beam Search decoder
-│   └── build/                     # Compiled C++ backend (.pyd/.so)
-│
-├── data_preparation/             # Dataset creation and refinement
-│   ├── data_annotation.ipynb     # Creating and cleaning the real handwritten dataset
-│   ├── data_generation.ipynb     # Synthetic data generation and real data augmentation
-│   └── README.md     
-│
-├── requirements.txt              # Python dependency file
-└── README.md
+├── pipeline/                            # Integrated detection + recognition setup
+│   ├── wrapper.py                       # Runs detection → recognition pipeline
+│   ├── board.py                         # OpenCV-based handwriting board
+│   ├── run_board.py                     # CLI launcher for board interface
+│   ├── board_output.png                 # Example board image
+│   ├── main.ipynb                       # Pipeline demo and testing notebook
+│   └── README.md                        # Instructions for using the pipeline
+
+├── SimpleHTR/                           # TensorFlow-based CRNN recognizer
+│   ├── fine_tuning.ipynb                # Notebook for adapting model to Armenian
+│   ├── armo_training_tuning_summary.json # Summary of training runs
+│   ├── LICENSE.md, README.md
+│   ├── model_checkpoints_armo/          # Final fine-tuned model weights
+│   ├── model_arm/                       # Backup model snapshot (optional)
+│   ├── model/                           # Unused checkpoint path
+│   ├── data/                            # Armenian image + corpus
+│   │   ├── corpus.txt                   # Armenian corpus for WBS
+│   │   ├── line.png, word.png, test_picture.jpg
+│   ├── doc/                             # Visuals used in explanations
+│   │   ├── htr.png, decoder_comparison.png, graphics.svg
+│   └── src/                             # Training + inference code
+│       ├── dataloader_arm.py, model.py, train.py, etc.
+
+├── deep-text-recognition-benchmark/     # PyTorch-based CRNN OCR (Clova)
+│   ├── fine_tuning.ipynb                # Fine-tuning Clova OCR on Armenian words
+│   ├── modules/                         # CRNN architecture
+│   ├── pretrained/, saved_models/       # Model files
+│   ├── demo_image/, figures/            # Output & evaluation visuals
+│   └── *.py                             # Training, testing, utils
+
+├── data_preparation/                    # Dataset construction tools
+│   ├── data_annotation.ipynb            # Real handwritten word annotation and cleanup
+│   ├── data_generation.ipynb            # Synthetic Armenian word image generation
+│   ├── hye_wikipedia_2021_1M-words.txt  # Armenian word list (scraped)
+│   ├── *.png                            # Sample generated/processed images
+│   ├── sample_output/                   # Exported synthetic word images
+│   └── README.md
+
+├── CRAFT-pytorch/                       # CRAFT-based word detector
+│   ├── inference.py                     # Modified inference with orientation handling
+│   ├── craft.py, craft_utils.py, etc.
+│   ├── basenet/                         # VGG16 backbone
+│   ├── weights/                         # Placeholder for CRAFT weights
+│   └── figures/                         # Demo visuals
+
+├── CTCWordBeamSearch/                   # Word Beam Search CTC decoder
+│   ├── cpp/                             # C++ decoder implementation
+│   ├── extras/                          # Python and TF integration
+│   ├── tests/                           # Unit tests
+│   ├── setup.py                         # Package installer
+│   └── README.md, LICENSE.md
+
+├── licenses/                            # License files for third-party tools
+│   ├── CRAFT, DeepTextRec, SimpleHTR, WBS
+
+├── Capstone_Paper.pdf                   # Final Capstone Paper
+├── requirements.txt                     # Python dependencies
+└── README.md                            # Project description and usage
 ```
+
 ## Main Notebooks
 
 This repository includes several key notebooks that support data preparation, model training, and end-to-end usage:
