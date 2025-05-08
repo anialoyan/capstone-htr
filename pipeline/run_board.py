@@ -40,7 +40,7 @@ print("2. ClovaAI")
 choice = input("Enter 1 or 2: ").strip()
 if choice == "1":
     model_name = "SimpleHTR"
-    decoder = input("Decoder (wbs / bestpath / beamsearch) [default: wbs]: ").strip() or "wbs"
+    decoder = input("Decoder (wbs / bestpath / beamsearch) [default: bestpath]: ").strip() or None
     config = get_model_config(model_name, decoder)
 elif choice == "2":
     model_name = "ClovaAI"

@@ -30,8 +30,13 @@ from craft import CRAFT
 from src.model import Model as SimpleHTR, DecoderType
 from src.dataloader_arm import Batch
 from src.preprocessor import Preprocessor
-from word_beam_search import WordBeamSearch
 
+try:
+    from word_beam_search import WordBeamSearch
+    WBS_AVAILABLE = True
+except ImportError:
+    print("Warning: Word Beam Search module not found. Falling back to other decoding strategies.")
+    WBS_AVAILABLE = False
 
 from utils import CTCLabelConverter
 from PIL import Image
@@ -177,7 +182,7 @@ def load_recognizer(
         with open(char_list_path, encoding="utf-8") as f:
             char_list = list(f.read())
 
-        if decoder == "wbs":
+        if decoder == "wbs" and WBS_AVAILABLE:
             decoder_type = DecoderType.WordBeamSearch
         elif decoder == "bs":
             decoder_type = DecoderType.Beamsearch
@@ -377,7 +382,7 @@ def predict(images, model, opt, device, converter):
     return predictions
 
 
-def get_model_config(model_name="SimpleHTR", decoder_name="wbs"):
+def get_model_config(model_name="SimpleHTR", decoder_name=None):
     """
     Returns config dictionary based on selected model name and decoder.
 
