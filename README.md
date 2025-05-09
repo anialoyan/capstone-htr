@@ -107,8 +107,7 @@ If using the `wbs` decoder in SimpleHTR, you must compile the decoder library fr
 
 ```bash
 cd CTCWordBeamSearch
-# Follow OS-specific build instructions
-# Example (Linux): cmake . && make
+pip install .
 ```
 
 If not using `wbs`, the default decoders `bestpath` and `beamsearch` require no external compilation.
