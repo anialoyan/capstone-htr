@@ -13,7 +13,7 @@ matplotlib
 seaborn
 tqdm
 opencv-python==4.4.0.46
-editdistance==0.5.2
+editdistance
 lmdb==1.6.2
 pyarrow==17.0.0
 pillow==10.4.0
